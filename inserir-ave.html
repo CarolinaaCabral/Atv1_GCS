@@ -13,7 +13,6 @@
   </head>
   <body class="bg-dark text-light">
 
-    <!-- Navbar idêntica à index -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="index.html"></a>
@@ -31,7 +30,6 @@
               <a class="nav-link" href="index.html">Início</a>
             </li>
 
-            <!-- Mamíferos -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                 Mamíferos
@@ -44,7 +42,6 @@
               </ul>
             </li>
 
-            <!-- Peixes -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                 Peixes
@@ -57,7 +54,6 @@
               </ul>
             </li>
 
-            <!-- Aves (Módulo Atual) -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
                 Aves
@@ -74,7 +70,6 @@
       </div>
     </nav>
 
-    <!-- Formulário de Cadastro da Entidade Aves -->
     <main class="container my-5" style="max-width: 650px;">
       <div class="card bg-secondary bg-opacity-10 border border-secondary p-4 rounded-4 shadow">
         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -87,25 +82,22 @@
         </p>
 
         <form>
-          <!-- Atributo 1: String -->
+
           <div class="mb-3">
             <label for="nome" class="form-label">Nome da Espécie</label>
             <input type="text" class="form-control" id="nome" placeholder="Ex: Gavião-real" required />
           </div>
 
-          <!-- Atributo 2: int -->
           <div class="mb-3">
             <label for="expectativa" class="form-label">Expectativa de Vida em anos</label>
             <input type="number" class="form-control" id="expectativa" placeholder="Ex: 25" required />
           </div>
 
-          <!-- Atributo 3: float -->
           <div class="mb-3">
             <label for="envergadura" class="form-label">Envergadura das Asas em metros</label>
             <input type="number" step="0.01" class="form-control" id="envergadura" placeholder="Ex: 2.10" required />
           </div>
 
-          <!-- Atributo 4: boolean -->
           <div class="mb-4">
             <label class="form-label d-block">Capacidade de Voo</label>
             <div class="form-check form-switch">
