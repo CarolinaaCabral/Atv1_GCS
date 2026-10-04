@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gerenciar Peixes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Início</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Mamíferos
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="mamifero.html#inserir"
+                    >Inserir Mamífero</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="mamifero.html#alterar"
+                    >Alterar Mamífero</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="mamifero.html#excluir"
+                    >Excluir Mamífero</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="mamifero.html#procurar"
+                    >Procurar Mamífero</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Peixes
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#inserir">Inserir Peixe</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#alterar">Alterar Peixe</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#excluir">Excluir Peixe</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#procurar">Procurar Peixe</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Aves
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Inserir Ave</a></li>
+                <li><a class="dropdown-item" href="#">Alterar Ave</a></li>
+                <li><a class="dropdown-item" href="#">Excluir Ave</a></li>
+                <li><a class="dropdown-item" href="#">Procurar Ave</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <div class="text-center mb-5">
+        <h1 class="display-5">Painel de Gerenciamento: Peixes</h1>
+        <p class="text-muted">
+          Utilize as seções abaixo para gerenciar as informações.
+        </p>
+      </div>
+
+      <div id="inserir" class="pt-5 mb-5">
+        <div class="card shadow-sm border-dark">
+          <div class="card-header bg-dark text-white border-bottom border-dark">
+            <h4 class="mb-0">Inserir Novo Peixe</h4>
+          </div>
+          <div class="card-body">
+            <form action="#">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="nomePeixe" class="form-label"
+                    >Nome (String)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nomePeixe"
+                    placeholder="Ex: Tilápia"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="pesoPeixe" class="form-label"
+                    >Peso em kg (Float)</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="pesoPeixe"
+                    step="0.01"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="faixaProfundidade" class="form-label"
+                    >Faixa de Profundidade (String)</label
+                  >
+                  <select class="form-select" id="faixaProfundidade" required>
+                    <option value="" selected disabled>
+                      Selecione a faixa...
+                    </option>
+                    <option value="epipelagica">Epipelágica (0 – 200 m)</option>
+                    <option value="mesopelagica">
+                      Mesopelágica (200 – 1.000 m)
+                    </option>
+                    <option value="batipelagica">
+                      Batipelágica (1.000 – 4.000 m)
+                    </option>
+                    <option value="abissopelagica">
+                      Abissopelágica (4.000 – 6.000 m)
+                    </option>
+                    <option value="hadal">Hadal (acima de 6.000 m)</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3 d-flex align-items-center mt-3">
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="ehOsseo"
+                    />
+                    <label class="form-check-label" for="ehOsseo"
+                      >É ósseo? (Boolean)</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-dark fw-bold text-white">
+                Salvar Cadastro
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="alterar" class="pt-5 mb-5">
+        <div class="card shadow-sm border-dark">
+          <div class="card-header bg-dark text-white border-bottom border-dark">
+            <h4 class="mb-0">Alterar Peixe Existente</h4>
+          </div>
+          <div class="card-body">
+            <div class="input-group mb-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Digite o ID ou Nome do peixe para buscar..."
+              />
+              <button class="btn btn-outline-secondary" type="button">
+                Buscar para Alterar
+              </button>
+            </div>
+            <hr />
+            <form action="#">
+              <div class="row text-muted">
+                <p>
+                  <em
+                    >* Imagine que ao buscar, os campos abaixo seriam
+                    preenchidos automaticamente.</em
+                  >
+                </p>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Nome</label>
+                  <input type="text" class="form-control" value="Atum-azul" />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Peso (kg)</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    step="0.01"
+                    value="250.0"
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Faixa de Profundidade</label>
+                  <select class="form-select">
+                    <option value="epipelagica" selected>
+                      Epipelágica (0 – 200 m)
+                    </option>
+                    <option value="mesopelagica">
+                      Mesopelágica (200 – 1.000 m)
+                    </option>
+                    <option value="batipelagica">
+                      Batipelágica (1.000 – 4.000 m)
+                    </option>
+                    <option value="abissopelagica">
+                      Abissopelágica (4.000 – 6.000 m)
+                    </option>
+                    <option value="hadal">Hadal (acima de 6.000 m)</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3 d-flex align-items-center mt-3">
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="ehOsseoAlterar"
+                      checked
+                    />
+                    <label class="form-check-label" for="ehOsseoAlterar"
+                      >É ósseo?</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-dark fw-bold text-white">
+                Salvar Alterações
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="excluir" class="pt-5 mb-5">
+        <div class="card shadow-sm border-dark">
+          <div class="card-header bg-dark text-white border-bottom border-dark">
+            <h4 class="mb-0">Excluir Peixe</h4>
+          </div>
+          <div class="card-body">
+            <p class="text-danger fw-bold">
+              Atenção: Esta ação não pode ser desfeita.
+            </p>
+            <form action="#" class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="idExcluir" class="col-form-label"
+                  >ID do Peixe a excluir:</label
+                >
+              </div>
+              <div class="col-auto">
+                <input
+                  type="number"
+                  id="idExcluir"
+                  class="form-control"
+                  placeholder="Ex: 12"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-dark fw-bold text-white">
+                  Confirmar Exclusão
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="procurar" class="pt-5 mb-5">
+        <div class="card shadow-sm border-dark">
+          <div class="card-header bg-dark text-white border-bottom border-dark">
+            <h4 class="mb-0">Procurar Peixes (Tabela)</h4>
+          </div>
+          <div class="card-body">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Procurar por nome, peso, etc..."
+              />
+              <button class="btn btn-dark fw-bold text-white" type="button">
+                Pesquisar
+              </button>
+            </div>
+            <table class="table table-hover table-striped border">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Peso (kg)</th>
+                  <th scope="col">Faixa de Profundidade</th>
+                  <th scope="col">Ósseo?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Atum-azul</td>
+                  <td>250.0</td>
+                  <td>Epipelágica</td>
+                  <td><span class="badge bg-success">Sim</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Tubarão-branco</td>
+                  <td>1100.0</td>
+                  <td>Epipelágica</td>
+                  <td><span class="badge bg-danger">Não</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Peixe-lanterna</td>
+                  <td>0.02</td>
+                  <td>Mesopelágica</td>
+                  <td><span class="badge bg-success">Sim</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
