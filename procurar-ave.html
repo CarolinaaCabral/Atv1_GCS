@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-br" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Procurar Ave - Sistema de Animais</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">Catálogo Animal</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Mamíferos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="inserir-mamifero.html">Inserir Mamífero</a></li>
+                <li><a class="dropdown-item" href="alterar-mamifero.html">Alterar Mamífero</a></li>
+                <li><a class="dropdown-item" href="excluir-mamifero.html">Excluir Mamífero</a></li>
+                <li><a class="dropdown-item" href="procurar-mamifero.html">Procurar Mamífero</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Peixes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="inserir-peixe.html">Inserir Peixe</a></li>
+                <li><a class="dropdown-item" href="alterar-peixe.html">Alterar Peixe</a></li>
+                <li><a class="dropdown-item" href="excluir-peixe.html">Excluir Peixe</a></li>
+                <li><a class="dropdown-item" href="procurar-peixe.html">Procurar Peixe</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                Aves
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="inserir-ave.html">Inserir Ave</a></li>
+                <li><a class="dropdown-item" href="alterar-ave.html">Alterar Ave</a></li>
+                <li><a class="dropdown-item" href="excluir-ave.html">Excluir Ave</a></li>
+                <li><a class="dropdown-item active" href="procurar-ave.html">Procurar Ave</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 mb-0">Catálogo de Aves</h1>
+        <a href="inserir-ave.html" class="btn btn-primary">+ Cadastrar Ave</a>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-8 col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Procurar por nome da espécie..." />
+            <button class="btn btn-outline-secondary" type="button">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive rounded-3 border border-secondary shadow-sm">
+        <table class="table table-dark table-hover mb-0 align-middle">
+          <thead class="table-secondary text-dark">
+            <tr>
+              <th scope="col">Espécie</th>
+              <th scope="col">Expectativa de Vida</th>
+              <th scope="col">Envergadura</th>
+              <th scope="col">Capacidade de Voo</th>
+              <th scope="col" class="text-center">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-semibold">Arara-canindé</td>
+              <td>40 anos</td>
+              <td>0.90 m</td>
+              <td><span class="badge bg-success">Sim</span></td>
+              <td class="text-center">
+                <a href="alterar-ave.html" class="btn btn-sm btn-outline-primary me-1">Editar</a>
+                <a href="excluir-ave.html" class="btn btn-sm btn-outline-danger">Excluir</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Gavião-real</td>
+              <td>28 anos</td>
+              <td>2.15 m</td>
+              <td><span class="badge bg-success">Sim</span></td>
+              <td class="text-center">
+                <a href="alterar-ave.html" class="btn btn-sm btn-outline-primary me-1">Editar</a>
+                <a href="excluir-ave.html" class="btn btn-sm btn-outline-danger">Excluir</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Pinguim-imperador</td>
+              <td>20 anos</td>
+              <td>0.80 m</td>
+              <td><span class="badge bg-secondary">Não</span></td>
+              <td class="text-center">
+                <a href="alterar-ave.html" class="btn btn-sm btn-outline-primary me-1">Editar</a>
+                <a href="excluir-ave.html" class="btn btn-sm btn-outline-danger">Excluir</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
