@@ -1,0 +1,20 @@
+name: Pipeline CI Animais
+run-name: Mudança feita por -> ${{ github.actor }}
+
+on:
+  push:
+    branches: [main, developer]
+  pull_request:
+
+jobs:
+  lint-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - run: npx htmlhint@1 "*.html"
