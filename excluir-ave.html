@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-br" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Excluir Ave - Sistema de Animais</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Mamíferos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="inserir-mamifero.html">Inserir Mamífero</a></li>
+                <li><a class="dropdown-item" href="alterar-mamifero.html">Alterar Mamífero</a></li>
+                <li><a class="dropdown-item" href="excluir-mamifero.html">Excluir Mamífero</a></li>
+                <li><a class="dropdown-item" href="procurar-mamifero.html">Procurar Mamífero</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Peixes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="inserir-peixe.html">Inserir Peixe</a></li>
+                <li><a class="dropdown-item" href="alterar-peixe.html">Alterar Peixe</a></li>
+                <li><a class="dropdown-item" href="excluir-peixe.html">Excluir Peixe</a></li>
+                <li><a class="dropdown-item" href="procurar-peixe.html">Procurar Peixe</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                Aves
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="inserir-ave.html">Inserir Ave</a></li>
+                <li><a class="dropdown-item" href="alterar-ave.html">Alterar Ave</a></li>
+                <li><a class="dropdown-item active" href="excluir-ave.html">Excluir Ave</a></li>
+                <li><a class="dropdown-item" href="procurar-ave.html">Procurar Ave</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 650px;">
+      <div class="card bg-secondary bg-opacity-10 border border-danger p-4 rounded-4 shadow">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="h3 mb-0 text-danger">Excluir Registro de Ave</h2>
+          <a href="index.html" class="btn btn-sm btn-outline-secondary">&larr; Voltar</a>
+        </div>
+
+        <form>
+          <div class="mb-4">
+            <label for="selecionarAve" class="form-label fw-semibold">Selecione a Ave para Exclusão:</label>
+            <select class="form-select bg-dark text-light border-secondary" id="selecionarAve" required>
+              <option value="" disabled selected>Escolha uma espécie...</option>
+              <option value="1">Arara-canindé (40 anos | 0.90 m | Voa: Sim)</option>
+              <option value="2">Gavião-real (28 anos | 2.15 m | Voa: Sim)</option>
+              <option value="3">Pinguim-imperador (20 anos | 0.80 m | Voa: Não)</option>
+            </select>
+          </div>
+
+          <div class="alert alert-danger bg-danger bg-opacity-25 border-danger text-light mb-4" role="alert">
+            <strong>Atenção:</strong> A ave selecionada será removida permanentemente do sistema.
+          </div>
+
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-danger fw-semibold">Confirmar Exclusão</button>
+            <a href="index.html" class="btn btn-outline-secondary">Cancelar e Voltar</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
